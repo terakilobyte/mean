@@ -1,4 +1,5 @@
 /*jslint node: true*/
 exports.render = function(req, res) {
-  res.send('Hello World');
+  res.send('index', {
+    title: 'Hello World'});
 };

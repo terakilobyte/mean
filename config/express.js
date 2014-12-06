@@ -1,7 +1,7 @@
 /*jslint node: true*/
 var express = require('express'),
     morgan = require('morgan'),
-    compress = require('compress'),
+    compress = require('compression'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override');
 
@@ -14,9 +14,12 @@ module.exports = function() {
     app.use(compress());
   }
 
-  app.use(bodyParser.urlenconded({extended: true}));
+  app.use(bodyParser.urlencoded({extended: true}));
   app.use(bodyParser.json());
   app.use(methodOverride());
+
+  app.set('views', './app/views');
+  app.set('view engine', 'ejs');
 
   require('../app/routes/index.server.routes.js');
 
