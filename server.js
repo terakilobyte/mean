@@ -1,7 +1,7 @@
 /*jslint node: true*/
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-var mongoose = require('./config/mongoose'),
+var mongoose = require('./config/mongoose.js'),
     express = require('./config/express.js');
 
 var db = mongoose();
