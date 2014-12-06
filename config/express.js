@@ -11,7 +11,7 @@ var config = require('./config'),
     compress = require('compression'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
-    session = require('express-session'),
+    session = require('express-session');
 
 // Define the Express configuration method
 module.exports = function() {
