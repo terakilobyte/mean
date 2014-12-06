@@ -31,6 +31,13 @@ module.exports = function() {
 	app.use(bodyParser.json());
 	app.use(methodOverride());
 
+  // Set up sessions
+  app.use(session({
+    saveUninitialized: true,
+    resave: true,
+    secret: config.sessionSecret
+  }));
+
 
 	// Set the application view engine and 'views' folder
 	app.set('views', './app/views');
