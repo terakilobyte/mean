@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <!-- Use the 'title' property to render a page title  -->
+    <title>
+      <%=title %>
+    </title>
+    <link type="text/css" rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="/lib/bootstrap-social/bootstrap-social.css">
+    <link type="text/css" rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="/css/screen.css">
+
+  </head>
+
+  <body>
+    <!-- Display flash messages  -->
+    <% for(var i in messages) { %>
+    <div class="flash">
+      <%=messages[i] %>
+    </div>
+    <% } %>
+
+    <!-- Render the OAuth authentication links  -->
+    <div class="social-box">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="/oauth/facebook" title="Facebook" class="btn btn-block btn-social btn-facebook">
+            <i class="fa fa-facebook"></i> Sign in with Facebook
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <a href="/oauth/google" title="Google" class="btn btn-block btn-social btn-google-plus">
+            <i class="fa fa-google-plus"></i> Sign in with Google
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <a href="/oauth/twitter" title="Twitter" class="btn btn-block btn-social btn-twitter">
+            <i class="fa fa-twitter"></i> Sign in with Twitter
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <a href="/oauth/github" title="Github" class="btn btn-block btn-social btn-github">
+            <i class="fa fa-github"></i> Sign in with Github
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
